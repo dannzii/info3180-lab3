@@ -11,24 +11,32 @@
 <form method="POST" action="{{ url_for('contact') }}">
      {{ form.csrf_token }}
     <div class="my_form">
-        {{ form.name.label }}
+        {{ form.name.label }} <span class="required">(Required)</span>
+        <br>
+         <span class ="labeler">Please enter your full name</span>
         <br>
         {{ form.name(class="my_form") }}
     </div>
     <div class="my_form">
-        {{ form.email.label }}
+        {{ form.email.label }} <span class="required">(Required)</span>
+        <br>
+         <span class ="labeler" >Please enter your email address</span>
         <br>
         {{ form.email(class="my_form") }}
     </div>
     <div class="my_form">
-        {{ form.subject.label }}
+        {{ form.subject.label }} <span class="required">(Required)</span>
+        <br>
+        <span class ="labeler">Please enter a subject for your message</span>
         <br>
         {{ form.subject(class="my_form") }}
     </div>
     <div class="my_form">
-        {{ form.Text_Area.label }}
+        {{ form.Text_Area.label }} <span class="required">(Required)</span>
         <br>
-        {{ form.subject(class="my_form") }}
+        <span class ="blk" >Please enter the message you would like to send</span>
+        <br>
+        {{ form.Text_Area(class="my_form") }}
     </div>
     <br>
     <button type="submit" class="submitIT"> Submit </button>
