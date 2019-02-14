@@ -3,6 +3,7 @@
 {% block main %}
 
 <h2> Contact Form </h2>
+<hr id="title_sep">
 <div>
     <span> Fill in this form to contact the site owners. </span>
 </div>
@@ -17,6 +18,7 @@
         <br>
         {{ form.name(class="my_form") }}
     </div>
+    <br>
     <div class="my_form">
         {{ form.email.label }} <span class="required">(Required)</span>
         <br>
@@ -24,6 +26,7 @@
         <br>
         {{ form.email(class="my_form") }}
     </div>
+    <br>
     <div class="my_form">
         {{ form.subject.label }} <span class="required">(Required)</span>
         <br>
@@ -31,6 +34,7 @@
         <br>
         {{ form.subject(class="my_form") }}
     </div>
+    <br>
     <div class="my_form">
         {{ form.Text_Area.label }} <span class="required">(Required)</span>
         <br>
@@ -39,7 +43,7 @@
         {{ form.Text_Area(class="my_form") }}
     </div>
     <br>
-    <button type="submit" class="submitIT"> Submit </button>
+    <button type="submit" class="submitIT"> Send </button>
 </form>
 
 {% endblock %}
